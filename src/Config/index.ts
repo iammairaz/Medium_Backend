@@ -12,10 +12,12 @@ const connectDb = async () => {
         process.exit(1);
     }
 }
-const JWTSECRETTOKEN: string = process.env.JWT_SECET_TOKEN || ""
+const JWTSECRETTOKEN: string = process.env.JWT_SECET_TOKEN || "";
+const LISTENING_PORT: number = Number(process.env.PORT) || 4000; 
 
 export default {
     connectDb,
     JWTSECRETTOKEN,
-    prisma
+    prisma,
+    LISTENING_PORT
 }

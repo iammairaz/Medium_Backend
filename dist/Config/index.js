@@ -27,8 +27,10 @@ const connectDb = () => __awaiter(void 0, void 0, void 0, function* () {
     }
 });
 const JWTSECRETTOKEN = process.env.JWT_SECET_TOKEN || "";
+const LISTENING_PORT = Number(process.env.PORT) || 4000;
 exports.default = {
     connectDb,
     JWTSECRETTOKEN,
-    prisma
+    prisma,
+    LISTENING_PORT
 };
