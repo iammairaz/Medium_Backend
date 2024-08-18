@@ -9,8 +9,6 @@ const userRoute_1 = __importDefault(require("./Routes/userRoute"));
 const blogRoute_1 = __importDefault(require("./Routes/blogRoute"));
 const index_1 = __importDefault(require("./Config/index"));
 const app = (0, express_1.default)();
-const PORT = process.env.PORT;
-// config.connectDb();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use("/api/v1/user", userRoute_1.default);
